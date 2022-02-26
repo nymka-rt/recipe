@@ -14,7 +14,7 @@ export default class Search {
       this.result = result.data.recipes;
       return this.result;
     } catch (error) {
-      alert("エラー " + error);
+      console.log("Oops.." + error);
     }
   }
 }
