@@ -12,7 +12,7 @@ const renderNairlaga = (orts) => `
 export const highlightSelectedRecipe = (id) => {
   const arr = Array.from(document.querySelectorAll(".results__link"));
   arr.forEach((el) => el.classList.remove("results__link--active"));
-  const domObj = document.querySelector(`a[href*="${id}"]`);
+  const domObj = document.querySelector(`.results__link[href*="${id}"]`);
   if (domObj) domObj.classList.add("results__link--active");
 };
 export const clearRecipe = () => {
@@ -20,7 +20,7 @@ export const clearRecipe = () => {
   elements.recipeDiv.innerHTML = "";
 };
 
-export const renderRecipe = (recipe) => {
+export const renderRecipe = (recipe, isliked) => {
   // show recipe on display
   const html = `
   <figure class="recipe__fig">
@@ -64,7 +64,9 @@ export const renderRecipe = (recipe) => {
   </div>
   <button class="recipe__love">
       <svg class="header__likes">
-          <use href="img/icons.svg#icon-heart-outlined"></use>
+          <use href="img/icons.svg#icon-heart${
+            isliked ? "" : "-outlined"
+          }"></use>
       </svg>
   </button>
 </div>
