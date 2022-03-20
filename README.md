@@ -1,2 +1,3 @@
 # recipe
-https://nyambayr.github.io/recipe/
+
+npm run start
