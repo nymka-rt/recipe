@@ -1,4 +1,4 @@
 # recipe
-# open terminal and run
-npm install
-npm run start
+# # open terminal and run
+# # npm install
+# # npm run start
